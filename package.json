@@ -1,0 +1,25 @@
+{
+  "name": "bruv",
+  "version": "1.0.0",
+  "description": "A Solidity-based smart contract workspace",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.js",
+    "deploy-all": "hardhat run scripts/deploy-all.js",
+    "node": "hardhat node"
+  },
+  "keywords": [
+    "solidity",
+    "smart-contracts",
+    "ethereum",
+    "hardhat"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.26.3"
+  }
+}
