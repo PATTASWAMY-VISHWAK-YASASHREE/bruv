@@ -1,0 +1,1395 @@
+{
+    "contractName": "SupplyChainTrackerTest",
+    "abi": [
+        {
+            "inputs": [],
+            "name": "beforeEach",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "testAddItem",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "testUpdateStage",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.8.30+commit.73712a01\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"beforeEach\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"testAddItem\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"testUpdateStage\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Test contract for SupplyChainTracker.sol. Tests item addition and stage updates.\",\"kind\":\"dev\",\"methods\":{},\"title\":\"SupplyChainTrackerTest\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/workspaces/bruv/solidity_contracts/SupplyChainTrackerTest.sol\":\"SupplyChainTrackerTest\"},\"evmVersion\":\"prague\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[],\"viaIR\":true},\"sources\":{\"/workspaces/bruv/solidity_contracts/SupplyChainTracker.sol\":{\"keccak256\":\"0x95893e10d30d8c7ba3b94204485b4facbfe5b9151bf9b73f2e18b1afa30f3c35\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fe5ca11289a5314301719b4d2757531ea4f6214090ce7b979d53514529637a03\",\"dweb:/ipfs/QmWqHLvaqvsWZ3e8EigTwJQKztfUbL7B4dXPqtHWejD76w\"]},\"/workspaces/bruv/solidity_contracts/SupplyChainTrackerTest.sol\":{\"keccak256\":\"0x9856a2e621003982917f80eb5f17f2acfc557c685bf45a4adbd13d9e7159e3ae\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://de5a09ca9c6286c2f8dce8e708c913e6afe15db374abb32c8b0ea333d2828088\",\"dweb:/ipfs/QmZoSn191zd3YnB9y8Mc2DJU3TUs85s5k79p4JhSN7spAa\"]}},\"version\":1}",
+    "bytecode": "60808060405234601557610877908161001a8239f35b5f80fdfe6080806040526004361015610012575f80fd5b5f905f3560e01c90816337b7a464146101f2575080636331e7d41461017357639875c0ad1461003f575f80fd5b3461016d578060031936011261016d57805481906001600160a01b0316803b156101705781809160246040518094819363be63404560e01b8352600160048401525af1801561014d57610158575b50508054604051633129e77360e01b81526001600482015290608090829060249082906001600160a01b03165afa90811561014d57829161011e575b506100d760018251146103df565b6020810151600481101561010a57906100f361010792156103df565b604001516001600160a01b031630146103df565b80f35b634e487b7160e01b83526021600452602483fd5b610140915060803d608011610146575b6101388183610341565b810190610377565b5f6100c9565b503d61012e565b6040513d84823e3d90fd5b8161016291610341565b61016d57805f61008d565b80fd5b50fd5b503461016d578060031936011261016d576040516104478082019082821067ffffffffffffffff8311176101de579082916103fb8339039082f080156101d15781546001600160a01b0319166001600160a01b039190911617815580f35b50604051903d90823e3d90fd5b634e487b7160e01b84526041600452602484fd5b90503461033d575f36600319011261033d575f546001600160a01b0316803b1561033d57816024815f809463be63404560e01b8352600260048401525af180156103325761031f575b50805481906001600160a01b0316803b156101705781809160446040518094819363f405c96b60e01b835260026004840152600160248401525af1801561014d5761030a575b50508054604051633129e77360e01b81526002600482015290608090829060249082906001600160a01b03165afa801561014d5760209183916102eb575b50015160048110156102d757600161010791146103df565b634e487b7160e01b82526021600452602482fd5b610304915060803d608011610146576101388183610341565b5f6102bf565b8161031491610341565b61016d57805f610281565b61032b91505f90610341565b5f5f61023b565b6040513d5f823e3d90fd5b5f80fd5b90601f8019910116810190811067ffffffffffffffff82111761036357604052565b634e487b7160e01b5f52604160045260245ffd5b9081608091031261033d57604051906080820182811067ffffffffffffffff82111761036357604052805182526020810151600481101561033d5760208301526040810151906001600160a01b038216820361033d5760609160408401520151606082015290565b156103e657565b634e487b7160e01b5f52600160045260245ffdfe6080806040523460155761042d908161001a8239f35b5f80fdfe60806040526004361015610011575f80fd5b5f3560e01c80633129e773146102ee578063be6340451461021a578063bfb231d2146101be5763f405c96b14610045575f80fd5b346101ba5760403660031901126101ba5760043560243560048110156101ba575f8281526020819052604090206001015460081c6001600160a01b0316330361018957815f525f60205260ff600160405f200154166004811015610175576001810180911161016157810361011c57816101136060927f20f13d5051a99e5a3e1fe067b2dad576cc3253d70a33e0c746becebd65d4baa4945f525f6020526100f381600160405f20016103df565b825f525f60205242600260405f200155604051928352602083019061039e565b336040820152a1005b60405162461bcd60e51b815260206004820152601860248201527f496e76616c6964207374616765207472616e736974696f6e00000000000000006044820152606490fd5b634e487b7160e01b5f52601160045260245ffd5b634e487b7160e01b5f52602160045260245ffd5b60405162461bcd60e51b81526020600482015260096024820152682737ba1037bbb732b960b91b6044820152606490fd5b5f80fd5b346101ba5760203660031901126101ba576004355f525f602052608060405f2080549060026001820154910154906040519283526102026020840160ff831661039e565b60081c6001600160a01b031660408301526060820152f35b346101ba5760203660031901126101ba57600435805f525f60205260405f20546102b3576102466103ab565b9080825260208201905f8252604083019133835260608401914283525f525f60205260405f20935184556001840190519260048410156101755761028c600294836103df565b518154610100600160a81b03191660089190911b610100600160a81b031617905551910155005b60405162461bcd60e51b81526020600482015260136024820152724974656d20616c72656164792065786973747360681b6044820152606490fd5b346101ba5760203660031901126101ba575f606061030a6103ab565b82815282602082015282604082015201526004355f525f60205260405f206103306103ab565b8154815260018201549160ff83169260208301916004851015610175576002610387916080968552604086019360018060a01b039060081c168452015492606085019384526040519451855251602085019061039e565b516001600160a01b03166040830152516060820152f35b9060048210156101755752565b604051906080820182811067ffffffffffffffff8211176103cb57604052565b634e487b7160e01b5f52604160045260245ffd5b9060048110156101755760ff8019835416911617905556fea26469706673582212207d41a80d21d5bc8b588fe52a567ee85b3d692df6eed564dc7d0c61f7bd1e636664736f6c634300081e0033a2646970667358221220aadf541557fbd4968b95c8b57a66d5ddd9c4313e8d15b7c1ab23d1180dfb7db364736f6c634300081e0033",
+    "deployedBytecode": "6080806040526004361015610012575f80fd5b5f905f3560e01c90816337b7a464146101f2575080636331e7d41461017357639875c0ad1461003f575f80fd5b3461016d578060031936011261016d57805481906001600160a01b0316803b156101705781809160246040518094819363be63404560e01b8352600160048401525af1801561014d57610158575b50508054604051633129e77360e01b81526001600482015290608090829060249082906001600160a01b03165afa90811561014d57829161011e575b506100d760018251146103df565b6020810151600481101561010a57906100f361010792156103df565b604001516001600160a01b031630146103df565b80f35b634e487b7160e01b83526021600452602483fd5b610140915060803d608011610146575b6101388183610341565b810190610377565b5f6100c9565b503d61012e565b6040513d84823e3d90fd5b8161016291610341565b61016d57805f61008d565b80fd5b50fd5b503461016d578060031936011261016d576040516104478082019082821067ffffffffffffffff8311176101de579082916103fb8339039082f080156101d15781546001600160a01b0319166001600160a01b039190911617815580f35b50604051903d90823e3d90fd5b634e487b7160e01b84526041600452602484fd5b90503461033d575f36600319011261033d575f546001600160a01b0316803b1561033d57816024815f809463be63404560e01b8352600260048401525af180156103325761031f575b50805481906001600160a01b0316803b156101705781809160446040518094819363f405c96b60e01b835260026004840152600160248401525af1801561014d5761030a575b50508054604051633129e77360e01b81526002600482015290608090829060249082906001600160a01b03165afa801561014d5760209183916102eb575b50015160048110156102d757600161010791146103df565b634e487b7160e01b82526021600452602482fd5b610304915060803d608011610146576101388183610341565b5f6102bf565b8161031491610341565b61016d57805f610281565b61032b91505f90610341565b5f5f61023b565b6040513d5f823e3d90fd5b5f80fd5b90601f8019910116810190811067ffffffffffffffff82111761036357604052565b634e487b7160e01b5f52604160045260245ffd5b9081608091031261033d57604051906080820182811067ffffffffffffffff82111761036357604052805182526020810151600481101561033d5760208301526040810151906001600160a01b038216820361033d5760609160408401520151606082015290565b156103e657565b634e487b7160e01b5f52600160045260245ffdfe6080806040523460155761042d908161001a8239f35b5f80fdfe60806040526004361015610011575f80fd5b5f3560e01c80633129e773146102ee578063be6340451461021a578063bfb231d2146101be5763f405c96b14610045575f80fd5b346101ba5760403660031901126101ba5760043560243560048110156101ba575f8281526020819052604090206001015460081c6001600160a01b0316330361018957815f525f60205260ff600160405f200154166004811015610175576001810180911161016157810361011c57816101136060927f20f13d5051a99e5a3e1fe067b2dad576cc3253d70a33e0c746becebd65d4baa4945f525f6020526100f381600160405f20016103df565b825f525f60205242600260405f200155604051928352602083019061039e565b336040820152a1005b60405162461bcd60e51b815260206004820152601860248201527f496e76616c6964207374616765207472616e736974696f6e00000000000000006044820152606490fd5b634e487b7160e01b5f52601160045260245ffd5b634e487b7160e01b5f52602160045260245ffd5b60405162461bcd60e51b81526020600482015260096024820152682737ba1037bbb732b960b91b6044820152606490fd5b5f80fd5b346101ba5760203660031901126101ba576004355f525f602052608060405f2080549060026001820154910154906040519283526102026020840160ff831661039e565b60081c6001600160a01b031660408301526060820152f35b346101ba5760203660031901126101ba57600435805f525f60205260405f20546102b3576102466103ab565b9080825260208201905f8252604083019133835260608401914283525f525f60205260405f20935184556001840190519260048410156101755761028c600294836103df565b518154610100600160a81b03191660089190911b610100600160a81b031617905551910155005b60405162461bcd60e51b81526020600482015260136024820152724974656d20616c72656164792065786973747360681b6044820152606490fd5b346101ba5760203660031901126101ba575f606061030a6103ab565b82815282602082015282604082015201526004355f525f60205260405f206103306103ab565b8154815260018201549160ff83169260208301916004851015610175576002610387916080968552604086019360018060a01b039060081c168452015492606085019384526040519451855251602085019061039e565b516001600160a01b03166040830152516060820152f35b9060048210156101755752565b604051906080820182811067ffffffffffffffff8211176103cb57604052565b634e487b7160e01b5f52604160045260245ffd5b9060048110156101755760ff8019835416911617905556fea26469706673582212207d41a80d21d5bc8b588fe52a567ee85b3d692df6eed564dc7d0c61f7bd1e636664736f6c634300081e0033a2646970667358221220aadf541557fbd4968b95c8b57a66d5ddd9c4313e8d15b7c1ab23d1180dfb7db364736f6c634300081e0033",
+    "sourceMap": "236:713:1:-:0;;;;;;;;;;;;;;;;;",
+    "deployedSourceMap": "236:713:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;236:713:1;441:18;;;;;236:713;;;441:18;236:713;;;;;;;;;441:18;;457:1;236:713;441:18;;236:713;441:18;;;;;;;;236:713;-1:-1:-1;;236:713:1;;;;-1:-1:-1;;;508:18:1;;236:713;;508:18;;236:713;;508:18;;236:713;;441:18;;236:713;;-1:-1:-1;;;;;236:713:1;508:18;;;;;;;;;;;236:713;;537:25;457:1;236:713;;544:17;537:25;:::i;:::-;236:713;585:10;;236:713;;;;;;;;573:29;627:42;236:713;580:21;573:29;:::i;:::-;236:713;634:17;236:713;-1:-1:-1;;;;;236:713:1;663:4;634:34;627:42;:::i;:::-;236:713;;;-1:-1:-1;;;236:713:1;;;;;441:18;236:713;;508:18;;;;;;;;;;;;;;;:::i;:::-;;;;;:::i;:::-;;;;;;;;;;236:713;;;;;;;;;441:18;;;;;:::i;:::-;236:713;;441:18;;;;236:713;;;441:18;236:713;;;;;;;;;;;;;;;;;360:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;236:713;;-1:-1:-1;;;;;;236:713:1;-1:-1:-1;;;;;236:713:1;;;;;;;;;360:24;236:713;;;;;;;;;;;360:24;-1:-1:-1;;;236:713:1;;;;;;;;;;;;;;;;-1:-1:-1;;236:713:1;;;;;;-1:-1:-1;;;;;236:713:1;730:18;;;;;236:713;730:18;236:713;;;;;;;730:18;;746:1;236:713;730:18;;236:713;730:18;;;;;;;;236:713;-1:-1:-1;236:713:1;;;;-1:-1:-1;;;;;236:713:1;759:58;;;;;236:713;;;759:58;236:713;;;;;;;;;759:58;;746:1;236:713;759:58;;236:713;782:34;730:18;236:713;;;759:58;;;;;;;;236:713;-1:-1:-1;;236:713:1;;;;-1:-1:-1;;;866:18:1;;746:1;236:713;866:18;;236:713;;866:18;;236:713;;730:18;;236:713;;-1:-1:-1;;;;;236:713:1;866:18;;;;;;236:713;866:18;;;;;236:713;907:10;;236:713;;;;;;;782:34;895:29;236:713;902:21;895:29;:::i;236:713::-;-1:-1:-1;;;236:713:1;;;;;730:18;236:713;;866:18;;;;;;;;;;;;;;:::i;:::-;;;;759:58;;;;;:::i;:::-;236:713;;759:58;;;;730:18;;;;236:713;730:18;;:::i;:::-;236:713;730:18;;;;236:713;;;;;;;;;730:18;236:713;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;-1:-1:-1;236:713:1;;;;;-1:-1:-1;236:713:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;236:713:1;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;:::o;:::-;;;;;;;;;;;",
+    "sourcePath": "/workspaces/bruv/solidity_contracts/SupplyChainTrackerTest.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.8.30+commit.73712a01"
+    },
+    "ast": {
+        "absolutePath": "/workspaces/bruv/solidity_contracts/SupplyChainTrackerTest.sol",
+        "exportedSymbols": {
+            "SupplyChainTracker": [
+                135
+            ],
+            "SupplyChainTrackerTest": [
+                240
+            ]
+        },
+        "id": 241,
+        "license": "MIT",
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 137,
+                "literals": [
+                    "solidity",
+                    "^",
+                    "0.8",
+                    ".0"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "33:23:1"
+            },
+            {
+                "absolutePath": "/workspaces/bruv/solidity_contracts/SupplyChainTracker.sol",
+                "file": "./SupplyChainTracker.sol",
+                "id": 138,
+                "nameLocation": "-1:-1:-1",
+                "nodeType": "ImportDirective",
+                "scope": 241,
+                "sourceUnit": 136,
+                "src": "60:34:1",
+                "symbolAliases": [],
+                "unitAlias": ""
+            },
+            {
+                "abstract": false,
+                "baseContracts": [],
+                "canonicalName": "SupplyChainTrackerTest",
+                "contractDependencies": [
+                    135
+                ],
+                "contractKind": "contract",
+                "documentation": {
+                    "id": 139,
+                    "nodeType": "StructuredDocumentation",
+                    "src": "98:136:1",
+                    "text": " @title SupplyChainTrackerTest\n @dev Test contract for SupplyChainTracker.sol.\n Tests item addition and stage updates."
+                },
+                "fullyImplemented": true,
+                "id": 240,
+                "linearizedBaseContracts": [
+                    240
+                ],
+                "name": "SupplyChainTrackerTest",
+                "nameLocation": "245:22:1",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "constant": false,
+                        "id": 142,
+                        "mutability": "mutable",
+                        "name": "tracker",
+                        "nameLocation": "294:7:1",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 240,
+                        "src": "275:26:1",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_SupplyChainTracker_$135",
+                            "typeString": "contract SupplyChainTracker"
+                        },
+                        "typeName": {
+                            "id": 141,
+                            "nodeType": "UserDefinedTypeName",
+                            "pathNode": {
+                                "id": 140,
+                                "name": "SupplyChainTracker",
+                                "nameLocations": [
+                                    "275:18:1"
+                                ],
+                                "nodeType": "IdentifierPath",
+                                "referencedDeclaration": 135,
+                                "src": "275:18:1"
+                            },
+                            "referencedDeclaration": 135,
+                            "src": "275:18:1",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_SupplyChainTracker_$135",
+                                "typeString": "contract SupplyChainTracker"
+                            }
+                        },
+                        "visibility": "internal"
+                    },
+                    {
+                        "body": {
+                            "id": 152,
+                            "nodeType": "Block",
+                            "src": "339:53:1",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "id": 150,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "id": 145,
+                                            "name": "tracker",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 142,
+                                            "src": "350:7:1",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_contract$_SupplyChainTracker_$135",
+                                                "typeString": "contract SupplyChainTracker"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "=",
+                                        "rightHandSide": {
+                                            "arguments": [],
+                                            "expression": {
+                                                "argumentTypes": [],
+                                                "id": 148,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "nodeType": "NewExpression",
+                                                "src": "360:22:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_SupplyChainTracker_$135_$",
+                                                    "typeString": "function () returns (contract SupplyChainTracker)"
+                                                },
+                                                "typeName": {
+                                                    "id": 147,
+                                                    "nodeType": "UserDefinedTypeName",
+                                                    "pathNode": {
+                                                        "id": 146,
+                                                        "name": "SupplyChainTracker",
+                                                        "nameLocations": [
+                                                            "364:18:1"
+                                                        ],
+                                                        "nodeType": "IdentifierPath",
+                                                        "referencedDeclaration": 135,
+                                                        "src": "364:18:1"
+                                                    },
+                                                    "referencedDeclaration": 135,
+                                                    "src": "364:18:1",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_contract$_SupplyChainTracker_$135",
+                                                        "typeString": "contract SupplyChainTracker"
+                                                    }
+                                                }
+                                            },
+                                            "id": 149,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "kind": "functionCall",
+                                            "lValueRequested": false,
+                                            "nameLocations": [],
+                                            "names": [],
+                                            "nodeType": "FunctionCall",
+                                            "src": "360:24:1",
+                                            "tryCall": false,
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_contract$_SupplyChainTracker_$135",
+                                                "typeString": "contract SupplyChainTracker"
+                                            }
+                                        },
+                                        "src": "350:34:1",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_contract$_SupplyChainTracker_$135",
+                                            "typeString": "contract SupplyChainTracker"
+                                        }
+                                    },
+                                    "id": 151,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "350:34:1"
+                                }
+                            ]
+                        },
+                        "functionSelector": "6331e7d4",
+                        "id": 153,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "beforeEach",
+                        "nameLocation": "319:10:1",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 143,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "329:2:1"
+                        },
+                        "returnParameters": {
+                            "id": 144,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "339:0:1"
+                        },
+                        "scope": 240,
+                        "src": "310:82:1",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 199,
+                            "nodeType": "Block",
+                            "src": "430:247:1",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "hexValue": "31",
+                                                "id": 159,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "number",
+                                                "lValueRequested": false,
+                                                "nodeType": "Literal",
+                                                "src": "457:1:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_rational_1_by_1",
+                                                    "typeString": "int_const 1"
+                                                },
+                                                "value": "1"
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_rational_1_by_1",
+                                                    "typeString": "int_const 1"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 156,
+                                                "name": "tracker",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 142,
+                                                "src": "441:7:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_contract$_SupplyChainTracker_$135",
+                                                    "typeString": "contract SupplyChainTracker"
+                                                }
+                                            },
+                                            "id": 158,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberLocation": "449:7:1",
+                                            "memberName": "addItem",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 61,
+                                            "src": "441:15:1",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$__$",
+                                                "typeString": "function (uint256) external"
+                                            }
+                                        },
+                                        "id": 160,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "nameLocations": [],
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "441:18:1",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 161,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "441:18:1"
+                                },
+                                {
+                                    "assignments": [
+                                        166
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 166,
+                                            "mutability": "mutable",
+                                            "name": "item",
+                                            "nameLocation": "501:4:1",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 199,
+                                            "src": "470:35:1",
+                                            "stateVariable": false,
+                                            "storageLocation": "memory",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_struct$_Item_$17_memory_ptr",
+                                                "typeString": "struct SupplyChainTracker.Item"
+                                            },
+                                            "typeName": {
+                                                "id": 165,
+                                                "nodeType": "UserDefinedTypeName",
+                                                "pathNode": {
+                                                    "id": 164,
+                                                    "name": "SupplyChainTracker.Item",
+                                                    "nameLocations": [
+                                                        "470:18:1",
+                                                        "489:4:1"
+                                                    ],
+                                                    "nodeType": "IdentifierPath",
+                                                    "referencedDeclaration": 17,
+                                                    "src": "470:23:1"
+                                                },
+                                                "referencedDeclaration": 17,
+                                                "src": "470:23:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Item_$17_storage_ptr",
+                                                    "typeString": "struct SupplyChainTracker.Item"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 171,
+                                    "initialValue": {
+                                        "arguments": [
+                                            {
+                                                "hexValue": "31",
+                                                "id": 169,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "number",
+                                                "lValueRequested": false,
+                                                "nodeType": "Literal",
+                                                "src": "524:1:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_rational_1_by_1",
+                                                    "typeString": "int_const 1"
+                                                },
+                                                "value": "1"
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_rational_1_by_1",
+                                                    "typeString": "int_const 1"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 167,
+                                                "name": "tracker",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 142,
+                                                "src": "508:7:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_contract$_SupplyChainTracker_$135",
+                                                    "typeString": "contract SupplyChainTracker"
+                                                }
+                                            },
+                                            "id": 168,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberLocation": "516:7:1",
+                                            "memberName": "getItem",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 134,
+                                            "src": "508:15:1",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_struct$_Item_$17_memory_ptr_$",
+                                                "typeString": "function (uint256) view external returns (struct SupplyChainTracker.Item memory)"
+                                            }
+                                        },
+                                        "id": 170,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "nameLocations": [],
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "508:18:1",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_Item_$17_memory_ptr",
+                                            "typeString": "struct SupplyChainTracker.Item memory"
+                                        }
+                                    },
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "470:56:1"
+                                },
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "commonType": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                },
+                                                "id": 176,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "leftExpression": {
+                                                    "expression": {
+                                                        "id": 173,
+                                                        "name": "item",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 166,
+                                                        "src": "544:4:1",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_struct$_Item_$17_memory_ptr",
+                                                            "typeString": "struct SupplyChainTracker.Item memory"
+                                                        }
+                                                    },
+                                                    "id": 174,
+                                                    "isConstant": false,
+                                                    "isLValue": true,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "memberLocation": "549:7:1",
+                                                    "memberName": "batchId",
+                                                    "nodeType": "MemberAccess",
+                                                    "referencedDeclaration": 9,
+                                                    "src": "544:12:1",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "nodeType": "BinaryOperation",
+                                                "operator": "==",
+                                                "rightExpression": {
+                                                    "hexValue": "31",
+                                                    "id": 175,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": true,
+                                                    "kind": "number",
+                                                    "lValueRequested": false,
+                                                    "nodeType": "Literal",
+                                                    "src": "560:1:1",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_rational_1_by_1",
+                                                        "typeString": "int_const 1"
+                                                    },
+                                                    "value": "1"
+                                                },
+                                                "src": "544:17:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            ],
+                                            "id": 172,
+                                            "name": "assert",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 4294967293,
+                                            "src": "537:6:1",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_assert_pure$_t_bool_$returns$__$",
+                                                "typeString": "function (bool) pure"
+                                            }
+                                        },
+                                        "id": 177,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "nameLocations": [],
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "537:25:1",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 178,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "537:25:1"
+                                },
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "commonType": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                },
+                                                "id": 186,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "leftExpression": {
+                                                    "arguments": [
+                                                        {
+                                                            "expression": {
+                                                                "id": 182,
+                                                                "name": "item",
+                                                                "nodeType": "Identifier",
+                                                                "overloadedDeclarations": [],
+                                                                "referencedDeclaration": 166,
+                                                                "src": "585:4:1",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_struct$_Item_$17_memory_ptr",
+                                                                    "typeString": "struct SupplyChainTracker.Item memory"
+                                                                }
+                                                            },
+                                                            "id": 183,
+                                                            "isConstant": false,
+                                                            "isLValue": true,
+                                                            "isPure": false,
+                                                            "lValueRequested": false,
+                                                            "memberLocation": "590:5:1",
+                                                            "memberName": "stage",
+                                                            "nodeType": "MemberAccess",
+                                                            "referencedDeclaration": 12,
+                                                            "src": "585:10:1",
+                                                            "typeDescriptions": {
+                                                                "typeIdentifier": "t_enum$_Stage_$7",
+                                                                "typeString": "enum SupplyChainTracker.Stage"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "expression": {
+                                                        "argumentTypes": [
+                                                            {
+                                                                "typeIdentifier": "t_enum$_Stage_$7",
+                                                                "typeString": "enum SupplyChainTracker.Stage"
+                                                            }
+                                                        ],
+                                                        "id": 181,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": true,
+                                                        "lValueRequested": false,
+                                                        "nodeType": "ElementaryTypeNameExpression",
+                                                        "src": "580:4:1",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_type$_t_uint256_$",
+                                                            "typeString": "type(uint256)"
+                                                        },
+                                                        "typeName": {
+                                                            "id": 180,
+                                                            "name": "uint",
+                                                            "nodeType": "ElementaryTypeName",
+                                                            "src": "580:4:1",
+                                                            "typeDescriptions": {}
+                                                        }
+                                                    },
+                                                    "id": 184,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "kind": "typeConversion",
+                                                    "lValueRequested": false,
+                                                    "nameLocations": [],
+                                                    "names": [],
+                                                    "nodeType": "FunctionCall",
+                                                    "src": "580:16:1",
+                                                    "tryCall": false,
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "nodeType": "BinaryOperation",
+                                                "operator": "==",
+                                                "rightExpression": {
+                                                    "hexValue": "30",
+                                                    "id": 185,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": true,
+                                                    "kind": "number",
+                                                    "lValueRequested": false,
+                                                    "nodeType": "Literal",
+                                                    "src": "600:1:1",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_rational_0_by_1",
+                                                        "typeString": "int_const 0"
+                                                    },
+                                                    "value": "0"
+                                                },
+                                                "src": "580:21:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            ],
+                                            "id": 179,
+                                            "name": "assert",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 4294967293,
+                                            "src": "573:6:1",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_assert_pure$_t_bool_$returns$__$",
+                                                "typeString": "function (bool) pure"
+                                            }
+                                        },
+                                        "id": 187,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "nameLocations": [],
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "573:29:1",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 188,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "573:29:1"
+                                },
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "commonType": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                },
+                                                "id": 196,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "leftExpression": {
+                                                    "expression": {
+                                                        "id": 190,
+                                                        "name": "item",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 166,
+                                                        "src": "634:4:1",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_struct$_Item_$17_memory_ptr",
+                                                            "typeString": "struct SupplyChainTracker.Item memory"
+                                                        }
+                                                    },
+                                                    "id": 191,
+                                                    "isConstant": false,
+                                                    "isLValue": true,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "memberLocation": "639:12:1",
+                                                    "memberName": "currentOwner",
+                                                    "nodeType": "MemberAccess",
+                                                    "referencedDeclaration": 14,
+                                                    "src": "634:17:1",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_address",
+                                                        "typeString": "address"
+                                                    }
+                                                },
+                                                "nodeType": "BinaryOperation",
+                                                "operator": "==",
+                                                "rightExpression": {
+                                                    "arguments": [
+                                                        {
+                                                            "id": 194,
+                                                            "name": "this",
+                                                            "nodeType": "Identifier",
+                                                            "overloadedDeclarations": [],
+                                                            "referencedDeclaration": 4294967268,
+                                                            "src": "663:4:1",
+                                                            "typeDescriptions": {
+                                                                "typeIdentifier": "t_contract$_SupplyChainTrackerTest_$240",
+                                                                "typeString": "contract SupplyChainTrackerTest"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "expression": {
+                                                        "argumentTypes": [
+                                                            {
+                                                                "typeIdentifier": "t_contract$_SupplyChainTrackerTest_$240",
+                                                                "typeString": "contract SupplyChainTrackerTest"
+                                                            }
+                                                        ],
+                                                        "id": 193,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": true,
+                                                        "lValueRequested": false,
+                                                        "nodeType": "ElementaryTypeNameExpression",
+                                                        "src": "655:7:1",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_type$_t_address_$",
+                                                            "typeString": "type(address)"
+                                                        },
+                                                        "typeName": {
+                                                            "id": 192,
+                                                            "name": "address",
+                                                            "nodeType": "ElementaryTypeName",
+                                                            "src": "655:7:1",
+                                                            "typeDescriptions": {}
+                                                        }
+                                                    },
+                                                    "id": 195,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "kind": "typeConversion",
+                                                    "lValueRequested": false,
+                                                    "nameLocations": [],
+                                                    "names": [],
+                                                    "nodeType": "FunctionCall",
+                                                    "src": "655:13:1",
+                                                    "tryCall": false,
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_address",
+                                                        "typeString": "address"
+                                                    }
+                                                },
+                                                "src": "634:34:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            ],
+                                            "id": 189,
+                                            "name": "assert",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 4294967293,
+                                            "src": "627:6:1",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_assert_pure$_t_bool_$returns$__$",
+                                                "typeString": "function (bool) pure"
+                                            }
+                                        },
+                                        "id": 197,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "nameLocations": [],
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "627:42:1",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 198,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "627:42:1"
+                                }
+                            ]
+                        },
+                        "functionSelector": "9875c0ad",
+                        "id": 200,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "testAddItem",
+                        "nameLocation": "409:11:1",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 154,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "420:2:1"
+                        },
+                        "returnParameters": {
+                            "id": 155,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "430:0:1"
+                        },
+                        "scope": 240,
+                        "src": "400:277:1",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 238,
+                            "nodeType": "Block",
+                            "src": "719:227:1",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "hexValue": "32",
+                                                "id": 206,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "number",
+                                                "lValueRequested": false,
+                                                "nodeType": "Literal",
+                                                "src": "746:1:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_rational_2_by_1",
+                                                    "typeString": "int_const 2"
+                                                },
+                                                "value": "2"
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_rational_2_by_1",
+                                                    "typeString": "int_const 2"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 203,
+                                                "name": "tracker",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 142,
+                                                "src": "730:7:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_contract$_SupplyChainTracker_$135",
+                                                    "typeString": "contract SupplyChainTracker"
+                                                }
+                                            },
+                                            "id": 205,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberLocation": "738:7:1",
+                                            "memberName": "addItem",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 61,
+                                            "src": "730:15:1",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$__$",
+                                                "typeString": "function (uint256) external"
+                                            }
+                                        },
+                                        "id": 207,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "nameLocations": [],
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "730:18:1",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 208,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "730:18:1"
+                                },
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "hexValue": "32",
+                                                "id": 212,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "number",
+                                                "lValueRequested": false,
+                                                "nodeType": "Literal",
+                                                "src": "779:1:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_rational_2_by_1",
+                                                    "typeString": "int_const 2"
+                                                },
+                                                "value": "2"
+                                            },
+                                            {
+                                                "expression": {
+                                                    "expression": {
+                                                        "id": 213,
+                                                        "name": "SupplyChainTracker",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 135,
+                                                        "src": "782:18:1",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_type$_t_contract$_SupplyChainTracker_$135_$",
+                                                            "typeString": "type(contract SupplyChainTracker)"
+                                                        }
+                                                    },
+                                                    "id": 214,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "memberLocation": "801:5:1",
+                                                    "memberName": "Stage",
+                                                    "nodeType": "MemberAccess",
+                                                    "referencedDeclaration": 7,
+                                                    "src": "782:24:1",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_type$_t_enum$_Stage_$7_$",
+                                                        "typeString": "type(enum SupplyChainTracker.Stage)"
+                                                    }
+                                                },
+                                                "id": 215,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "lValueRequested": false,
+                                                "memberLocation": "807:9:1",
+                                                "memberName": "Processed",
+                                                "nodeType": "MemberAccess",
+                                                "referencedDeclaration": 4,
+                                                "src": "782:34:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_enum$_Stage_$7",
+                                                    "typeString": "enum SupplyChainTracker.Stage"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_rational_2_by_1",
+                                                    "typeString": "int_const 2"
+                                                },
+                                                {
+                                                    "typeIdentifier": "t_enum$_Stage_$7",
+                                                    "typeString": "enum SupplyChainTracker.Stage"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 209,
+                                                "name": "tracker",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 142,
+                                                "src": "759:7:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_contract$_SupplyChainTracker_$135",
+                                                    "typeString": "contract SupplyChainTracker"
+                                                }
+                                            },
+                                            "id": 211,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberLocation": "767:11:1",
+                                            "memberName": "updateStage",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 121,
+                                            "src": "759:19:1",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$_t_enum$_Stage_$7_$returns$__$",
+                                                "typeString": "function (uint256,enum SupplyChainTracker.Stage) external"
+                                            }
+                                        },
+                                        "id": 216,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "nameLocations": [],
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "759:58:1",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 217,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "759:58:1"
+                                },
+                                {
+                                    "assignments": [
+                                        222
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 222,
+                                            "mutability": "mutable",
+                                            "name": "item",
+                                            "nameLocation": "859:4:1",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 238,
+                                            "src": "828:35:1",
+                                            "stateVariable": false,
+                                            "storageLocation": "memory",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_struct$_Item_$17_memory_ptr",
+                                                "typeString": "struct SupplyChainTracker.Item"
+                                            },
+                                            "typeName": {
+                                                "id": 221,
+                                                "nodeType": "UserDefinedTypeName",
+                                                "pathNode": {
+                                                    "id": 220,
+                                                    "name": "SupplyChainTracker.Item",
+                                                    "nameLocations": [
+                                                        "828:18:1",
+                                                        "847:4:1"
+                                                    ],
+                                                    "nodeType": "IdentifierPath",
+                                                    "referencedDeclaration": 17,
+                                                    "src": "828:23:1"
+                                                },
+                                                "referencedDeclaration": 17,
+                                                "src": "828:23:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Item_$17_storage_ptr",
+                                                    "typeString": "struct SupplyChainTracker.Item"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 227,
+                                    "initialValue": {
+                                        "arguments": [
+                                            {
+                                                "hexValue": "32",
+                                                "id": 225,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "number",
+                                                "lValueRequested": false,
+                                                "nodeType": "Literal",
+                                                "src": "882:1:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_rational_2_by_1",
+                                                    "typeString": "int_const 2"
+                                                },
+                                                "value": "2"
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_rational_2_by_1",
+                                                    "typeString": "int_const 2"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 223,
+                                                "name": "tracker",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 142,
+                                                "src": "866:7:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_contract$_SupplyChainTracker_$135",
+                                                    "typeString": "contract SupplyChainTracker"
+                                                }
+                                            },
+                                            "id": 224,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberLocation": "874:7:1",
+                                            "memberName": "getItem",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 134,
+                                            "src": "866:15:1",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_struct$_Item_$17_memory_ptr_$",
+                                                "typeString": "function (uint256) view external returns (struct SupplyChainTracker.Item memory)"
+                                            }
+                                        },
+                                        "id": 226,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "nameLocations": [],
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "866:18:1",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_Item_$17_memory_ptr",
+                                            "typeString": "struct SupplyChainTracker.Item memory"
+                                        }
+                                    },
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "828:56:1"
+                                },
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "commonType": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                },
+                                                "id": 235,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "leftExpression": {
+                                                    "arguments": [
+                                                        {
+                                                            "expression": {
+                                                                "id": 231,
+                                                                "name": "item",
+                                                                "nodeType": "Identifier",
+                                                                "overloadedDeclarations": [],
+                                                                "referencedDeclaration": 222,
+                                                                "src": "907:4:1",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_struct$_Item_$17_memory_ptr",
+                                                                    "typeString": "struct SupplyChainTracker.Item memory"
+                                                                }
+                                                            },
+                                                            "id": 232,
+                                                            "isConstant": false,
+                                                            "isLValue": true,
+                                                            "isPure": false,
+                                                            "lValueRequested": false,
+                                                            "memberLocation": "912:5:1",
+                                                            "memberName": "stage",
+                                                            "nodeType": "MemberAccess",
+                                                            "referencedDeclaration": 12,
+                                                            "src": "907:10:1",
+                                                            "typeDescriptions": {
+                                                                "typeIdentifier": "t_enum$_Stage_$7",
+                                                                "typeString": "enum SupplyChainTracker.Stage"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "expression": {
+                                                        "argumentTypes": [
+                                                            {
+                                                                "typeIdentifier": "t_enum$_Stage_$7",
+                                                                "typeString": "enum SupplyChainTracker.Stage"
+                                                            }
+                                                        ],
+                                                        "id": 230,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": true,
+                                                        "lValueRequested": false,
+                                                        "nodeType": "ElementaryTypeNameExpression",
+                                                        "src": "902:4:1",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_type$_t_uint256_$",
+                                                            "typeString": "type(uint256)"
+                                                        },
+                                                        "typeName": {
+                                                            "id": 229,
+                                                            "name": "uint",
+                                                            "nodeType": "ElementaryTypeName",
+                                                            "src": "902:4:1",
+                                                            "typeDescriptions": {}
+                                                        }
+                                                    },
+                                                    "id": 233,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "kind": "typeConversion",
+                                                    "lValueRequested": false,
+                                                    "nameLocations": [],
+                                                    "names": [],
+                                                    "nodeType": "FunctionCall",
+                                                    "src": "902:16:1",
+                                                    "tryCall": false,
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "nodeType": "BinaryOperation",
+                                                "operator": "==",
+                                                "rightExpression": {
+                                                    "hexValue": "31",
+                                                    "id": 234,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": true,
+                                                    "kind": "number",
+                                                    "lValueRequested": false,
+                                                    "nodeType": "Literal",
+                                                    "src": "922:1:1",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_rational_1_by_1",
+                                                        "typeString": "int_const 1"
+                                                    },
+                                                    "value": "1"
+                                                },
+                                                "src": "902:21:1",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            ],
+                                            "id": 228,
+                                            "name": "assert",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 4294967293,
+                                            "src": "895:6:1",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_assert_pure$_t_bool_$returns$__$",
+                                                "typeString": "function (bool) pure"
+                                            }
+                                        },
+                                        "id": 236,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "nameLocations": [],
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "895:29:1",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 237,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "895:29:1"
+                                }
+                            ]
+                        },
+                        "functionSelector": "37b7a464",
+                        "id": 239,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "testUpdateStage",
+                        "nameLocation": "694:15:1",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 201,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "709:2:1"
+                        },
+                        "returnParameters": {
+                            "id": 202,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "719:0:1"
+                        },
+                        "scope": 240,
+                        "src": "685:261:1",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    }
+                ],
+                "scope": 241,
+                "src": "236:713:1",
+                "usedErrors": [],
+                "usedEvents": []
+            }
+        ],
+        "src": "33:916:1"
+    },
+    "functionHashes": {
+        "beforeEach()": "6331e7d4",
+        "testAddItem()": "9875c0ad",
+        "testUpdateStage()": "37b7a464"
+    },
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "433400",
+            "executionCost": "475",
+            "totalCost": "433875"
+        },
+        "external": {
+            "beforeEach()": "infinite",
+            "testAddItem()": "infinite",
+            "testUpdateStage()": "infinite"
+        }
+    }
+}

@@ -1,0 +1,6 @@
+Raw outputs from web search and fetch tools for Solidity contracts and tests:
+- Solidity Docs: https://docs.soliditylang.org/ - Used for syntax, structs, modifiers, events.
+- OpenZeppelin Contracts: https://github.com/OpenZeppelin/openzeppelin-contracts - Referenced for ERC-20 patterns, adapted for supply chain.
+- Remix Testing: https://remix-ide.readthedocs.io/en/latest/testing.html - Used for test contract structure.
+- Stack Overflow: Discussions on Solidity testing, e.g., https://stackoverflow.com/questions/tagged/solidity - Helped with assert statements and test patterns.
+- EIP-20: https://eips.ethereum.org/EIPS/eip-20 - For token standards, but adapted to non-token contracts.

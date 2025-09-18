@@ -1,0 +1,39 @@
+{
+  "_format": "hh3-sol-build-info-1",
+  "id": "solc-0_8_28-06d9a911e00476e88f526e61f83e4ddf6b14bbae",
+  "solcVersion": "0.8.28",
+  "solcLongVersion": "0.8.28+commit.7893614a",
+  "userSourceNameMap": {
+    "contracts/SupplyChainTracker.sol": "project/contracts/SupplyChainTracker.sol"
+  },
+  "input": {
+    "language": "Solidity",
+    "settings": {
+      "evmVersion": "cancun",
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "outputSelection": {
+        "*": {
+          "": [
+            "ast"
+          ],
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers",
+            "metadata"
+          ]
+        }
+      },
+      "remappings": []
+    },
+    "sources": {
+      "project/contracts/SupplyChainTracker.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\n/**\r\n * @title SupplyChainTracker\r\n * @dev Contract for tracking herb batches through the supply chain stages.\r\n * Manages transitions from farmer to processor to consumer with unique batch identification.\r\n */\r\ncontract SupplyChainTracker {\r\n    enum Stage { Harvested, Processed, Packaged, Sold }\r\n\r\n    struct Item {\r\n        uint256 batchId;\r\n        string location;\r\n        string crop;\r\n        string farmerName;\r\n        Stage stage;\r\n        address currentOwner;\r\n        uint256 timestamp;\r\n    }\r\n\r\n    mapping(uint256 => Item) public items;\r\n    mapping(bytes32 => bool) private batchHashes; // To prevent duplicate combinations\r\n    uint256 private nextBatchId = 1;\r\n\r\n    event ItemAdded(uint256 batchId, string location, string crop, string farmerName, address owner);\r\n    event StageUpdated(uint256 batchId, Stage newStage, address owner);\r\n\r\n    function addItem(string memory _location, string memory _crop, string memory _farmerName) public returns (uint256) {\r\n        // Create a unique hash of the combination to prevent duplicates\r\n        bytes32 batchHash = keccak256(abi.encodePacked(_location, _crop, _farmerName));\r\n        require(!batchHashes[batchHash], \"Batch with this combination already exists\");\r\n\r\n        uint256 batchId = nextBatchId++;\r\n        items[batchId] = Item({\r\n            batchId: batchId,\r\n            location: _location,\r\n            crop: _crop,\r\n            farmerName: _farmerName,\r\n            stage: Stage.Harvested,\r\n            currentOwner: msg.sender,\r\n            timestamp: block.timestamp\r\n        });\r\n\r\n        batchHashes[batchHash] = true;\r\n        emit ItemAdded(batchId, _location, _crop, _farmerName, msg.sender);\r\n        return batchId;\r\n    }\r\n\r\n    function updateStage(uint256 _batchId, Stage _newStage) public {\r\n        require(items[_batchId].currentOwner == msg.sender, \"Not owner\");\r\n        require(uint(_newStage) == uint(items[_batchId].stage) + 1, \"Invalid stage transition\");\r\n        items[_batchId].stage = _newStage;\r\n        items[_batchId].timestamp = block.timestamp;\r\n        emit StageUpdated(_batchId, _newStage, msg.sender);\r\n    }\r\n\r\n    function getItem(uint256 _batchId) public view returns (\r\n        uint256 batchId,\r\n        string memory location,\r\n        string memory crop,\r\n        string memory farmerName,\r\n        Stage stage,\r\n        address currentOwner,\r\n        uint256 timestamp\r\n    ) {\r\n        Item memory item = items[_batchId];\r\n        return (\r\n            item.batchId,\r\n            item.location,\r\n            item.crop,\r\n            item.farmerName,\r\n            item.stage,\r\n            item.currentOwner,\r\n            item.timestamp\r\n        );\r\n    }\r\n\r\n    function getStageName(Stage _stage) public pure returns (string memory) {\r\n        if (_stage == Stage.Harvested) return \"Harvested\";\r\n        if (_stage == Stage.Processed) return \"Processed\";\r\n        if (_stage == Stage.Packaged) return \"Packaged\";\r\n        if (_stage == Stage.Sold) return \"Sold\";\r\n        return \"Unknown\";\r\n    }\r\n}"
+      }
+    }
+  }
+}

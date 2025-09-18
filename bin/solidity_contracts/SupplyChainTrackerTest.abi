@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"beforeEach","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"testAddItem","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"testUpdateStage","outputs":[],"stateMutability":"nonpayable","type":"function"}]
